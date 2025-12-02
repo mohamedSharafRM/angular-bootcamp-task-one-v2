@@ -1,0 +1,34 @@
+z-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+z-card  h3 {
+    margin: 0.8rem 0 0.3rem;
+    font-size: 1.1rem;
+  }
+  
+#description,
+#price{
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+  }
+
+#price{
+  font-size: 15px;
+  color: #2c333d;
+}
+  
+z-card .category {
+    display: block;
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 0.8rem;
+  }
+
+
+button[zType="primary"] {
+  width: 85%;
+}
+

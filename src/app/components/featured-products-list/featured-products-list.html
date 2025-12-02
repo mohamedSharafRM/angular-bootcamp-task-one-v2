@@ -1,0 +1,18 @@
+<h2>Featured Products</h2>
+@if (isLoading) {
+    <div class="flex flex-col space-y-3">
+        <z-skeleton class="rounded-xll h-[500px] w-full" />
+        <div class="space-y-2">
+          <z-skeleton class="h-4 w-[500px]" />
+          <z-skeleton class="h-4 w-[300px]" />
+        </div>
+      </div>
+}
+<div class="product-grid">
+@for (product of products; track product.id) {
+    <app-featured-product-card [product]="product"></app-featured-product-card>
+}
+@if(!products && !isLoading){
+    <h2>No Products Yet!</h2>
+}
+</div>

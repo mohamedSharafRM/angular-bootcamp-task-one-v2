@@ -1,0 +1,11 @@
+<z-card class="w-full max-w-sm">
+    <img [src]="product().thumbnail" [alt]="product().title">
+      <h3>{{product().title}}</h3>
+      <p id="description">{{product().description}}</p>
+      <span class="category">{{product().category}}</span> 
+      <p id="price">{{product().price | currency : 'USD'}}</p>   
+      <div class="flex items-center gap-4">
+        <button z-button zType="primary">Add to cart</button> 
+        <button z-button zType="outline" zShape="circle"><z-icon zType="heart" class="text-destructive" /></button>
+      </div>
+</z-card>

@@ -1,0 +1,20 @@
+<nav>
+    <div class="left-content">
+        <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">
+            <z-icon zType="house" [zStrokeWidth]="2" zSize="xl"  />
+            <h2>E-Commerce App</h2>
+        </a>
+    </div>
+    <div class="middle-content">
+        <button z-button zSize="default" zType="ghost" routerLink="/" 
+        routerLinkActive="active-link" [routerLinkActiveOptions]="{exact : true}">
+            <i z-icon zType="house"></i>Home</button>
+        <button z-button zSize="default" zType="ghost"  routerLink="/products" 
+        routerLinkActive="active-link" [routerLinkActiveOptions]="{exact : true}">Products</button>
+        <button z-button zSize="default" zType="ghost">About</button>
+        <button z-button zSize="default" zType="ghost">Contact</button>
+    </div>
+    <div class="right-content">
+        <button z-button zType="outline" zShape="circle"><i z-icon zType="arrow-up"></i></button>
+    </div>
+</nav>

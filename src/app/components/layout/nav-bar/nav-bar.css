@@ -1,0 +1,41 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafb;
+    padding: 12px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.left-content, 
+.middle-content,
+.right-content{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+  
+  .left-content a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  
+  .left-content a h2 {
+    font-size: 20px;
+    font-weight: 600;
+ 
+  }
+
+z-icon {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.left-content h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}

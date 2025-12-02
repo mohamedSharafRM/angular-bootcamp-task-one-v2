@@ -1,0 +1,38 @@
+@if(loading()){
+    <div class="flex items-center space-x-4">
+        <z-skeleton class="items-center h-20 w-full rounded-full" />
+        <div class="space-y-2">
+          <z-skeleton class="h-4 w-[250px]" />
+          <z-skeleton class="h-4 w-[200px]" />
+        </div>
+      </div>
+}
+
+
+@if(error()){
+    <z-alert zType="destructive" zTitle="Unable to process your payment." />
+}
+@if(!loading() && !error() && !products()){
+  <h2>No Products Yet!</h2>
+}
+
+<div class="filters">
+  <z-input-group [zAddOnBefore]="search" zLoading>
+    <input z-input type="search" placeholder="Search..." (keyup)="productService.applySearch($event)" />
+  </z-input-group>
+
+  <select (change)="productService.sortProducts($event)">
+    <option value="default">Default</option>
+    <option value="priceLowHigh">Low To High</option>
+    <option value="priceHighLow">High To Low</option>
+  </select>
+</div>
+
+<ng-template #search><z-icon zType="search" /></ng-template>
+
+
+<div class="product-grid">
+    @for (product of filteredData; track product.id) {
+        <app-featured-product-card [product]="product"></app-featured-product-card>
+}
+</div>
